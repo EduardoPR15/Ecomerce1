@@ -79,7 +79,7 @@
 }
 .FavoritosShow{
     right: 0;
-    z-index: 5;
+    z-index: 100;
     transition: .5s;
 }
 .inicio{
@@ -116,7 +116,7 @@ height: auto;
     background-color: brown;
     width: 100%;
     display: grid;
-    height: 500px;
+    height: auto;
     overflow: hidden;
 }
 .productos{
@@ -125,17 +125,18 @@ height: auto;
     height: auto;
     display: grid;
     margin: auto;
+    grid-gap: 50px;
 }
 .boxItem1{
     margin: auto;
     background-color: black;
     width: 400px;
-    height: 400px;
+    height: auto;
 }
 .animationItem1{
     margin: auto;
     width: 350px;
-    height: 350px;
+    height: 400px;
 }
 .item1{
     margin: auto;
@@ -145,7 +146,7 @@ height: auto;
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     flex-wrap: wrap;
     border-radius: 10px;
@@ -193,9 +194,28 @@ height: auto;
     width: 100%;
     height: 100%;
 }
+.descripcionBox{
+    background-color: red;
+    width: 97%;
+    height: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 150;
+}
 .precioItem1{
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: blueviolet;
-    width: auto;
-    height: 100px;
+    height: auto;
     z-index: 20;
+    text-align: center;
+}
+.btnAgregar{
+    height: auto;
+    width: auto;
+}
+.btnAgregar i{
+    text-align: center;
+    font-size: 50px;
 }
