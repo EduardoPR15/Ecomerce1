@@ -11,6 +11,9 @@
     --deg1: rgba(211,112,197,100);
 
 }
+body{
+    background-color: beige;
+}
 .barra{
     position: fixed;
     width: 100%;
@@ -119,7 +122,6 @@ height: auto;
     overflow: hidden;
 }
 .productos{
-    background-color: white;
     width: auto;
     height: auto;
     display: grid;
