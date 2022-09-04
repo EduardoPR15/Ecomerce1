@@ -1,9 +1,16 @@
 const btnCart = document.querySelector(".bolsita")
 const btnheart = document.querySelector(".Corazon")
+const Carrito = document.querySelector(".Carrito")
+const Corazon = document.querySelector(".Favoritos")
 console.log(btnheart); 
 btnheart.addEventListener("click", function(){
-    console.log(btnheart)})
+Corazon.classList.toggle("FavoritosShow")
+
+})
 
 console.log(btnCart); 
 btnCart.addEventListener("click", function(){
-    console.log(btnCart)})
+    Carrito.classList.toggle("ShowCart")
+    let html = '<h2>ola q paso :v</h2> '
+    document.querySelector("#fuente").innerHTML = html;
+})
