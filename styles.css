@@ -79,7 +79,7 @@
 }
 .FavoritosShow{
     right: 0;
-    z-index: 100;
+    z-index: 200;
     transition: .5s;
 }
 .inicio{
@@ -113,7 +113,6 @@ height: auto;
     height: 50px;
 }
 .catalogo{
-    background-color: brown;
     width: 100%;
     display: grid;
     height: auto;
@@ -204,12 +203,14 @@ height: auto;
     z-index: 150;
 }
 .precioItem1{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: auto;
     background-color: blueviolet;
     height: auto;
     z-index: 20;
     text-align: center;
+}
+.botonBox{
+    margin: auto;
 }
 .btnAgregar{
     height: auto;
