@@ -73,6 +73,7 @@ height: auto;
     width: 100%;
     display: grid;
     height: 500px;
+    overflow: hidden;
 }
 .productos{
     background-color: white;
