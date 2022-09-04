@@ -110,7 +110,7 @@ height: auto;
 .principalBtn{
     background-color: blueviolet;
     width: auto;
-    height: 50px;.
+    height: 50px;
 }
 .catalogo{
     background-color: brown;
@@ -134,24 +134,24 @@ height: auto;
 }
 .animationItem1{
     margin: auto;
-    background-color: rgb(0, 255, 242);
     width: 350px;
     height: 350px;
 }
 .item1{
+    margin: auto;
+    background:var(--navegacion);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--navegacion);
     width: 300px;
     height: 300px;
     overflow: hidden;
-    z-index: 11;
+    flex-wrap: wrap;
     border-radius: 10px;
 }
 
- .item1:hover:before{
+.item1:hover:before{
     content: '';
     position: absolute;
     width: 150px;
@@ -160,10 +160,7 @@ height: auto;
     animation: rotate 4s linear infinite;
     
 } 
-/* .item1:hover{
-    animation: rotate 0.4s linear infinite;
-    background:linear-gradient(#00CCFF,#D400D4);
-} */
+
 .item1:hover:after{
     content: '';
     position: absolute;
@@ -185,24 +182,20 @@ height: auto;
     
 
 }
-/* @keyframes rotate {
-    100%
-    {
-        filter:hue-rotate(360deg);
-    }
-} */
 .imagenItem1{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    background-color: cadetblue;
-    width: 150px;
-    height: 100px;
+    margin-top: 5px;
+    width: 96%;
+    height: 200px;
     z-index: 100;
+    flex-wrap: wrap;
+}
+.imagenItem1 img{
+    width: 100%;
+    height: 100%;
 }
 .precioItem1{
     background-color: blueviolet;
     width: auto;
     height: 100px;
+    z-index: 20;
 }
