@@ -14,7 +14,7 @@
 .barra{
     position: fixed;
     width: 100%;
-    z-index: 200;
+    z-index: 2000;
 
 }
 .navbar{
@@ -28,16 +28,60 @@
     justify-content: space-between;
     font-family: 'Snell Roundhand';
 }
-.fav i, .carrito i{
+.fav i, .Alcarrito i{
     border: none;
     font-size: 40px;
 }
 .Corazon, .bolsita{
     background-color: transparent;
     border-color: transparent;
+}
+.Carrito{
+    background-color: red;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    z-index: 1000;
+    left: 100%;
+    transition: .5s;
+}
+.DentroDe, .favoritos1{
+    background-color: blue;
+    margin-top: 100px;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+}
+.fuente, .favoritos2{
+    margin: auto;
+    margin-top: 100px;
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
 
 }
-
+.ShowCart{
+    left: 0;
+    z-index: 6;
+    transition: .5s;
+    z-index: 1000;
+}
+.Favoritos{
+    background-color:pink;
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    z-index: 900;
+    right: 100%;
+    transition: .5s;
+}
+.FavoritosShow{
+    right: 0;
+    z-index: 5;
+    transition: .5s;
+}
 .inicio{
 width: auto;
 height: auto;
@@ -95,16 +139,67 @@ height: auto;
     height: 350px;
 }
 .item1{
-    margin: auto;
-    background-color:blue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navegacion);
     width: 300px;
     height: 300px;
+    overflow: hidden;
+    z-index: 11;
+    border-radius: 10px;
 }
+
+ .item1:hover:before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150%;
+    background:linear-gradient(#00CCFF,#D400D4);
+    animation: rotate 4s linear infinite;
+    
+} 
+/* .item1:hover{
+    animation: rotate 0.4s linear infinite;
+    background:linear-gradient(#00CCFF,#D400D4);
+} */
+.item1:hover:after{
+    content: '';
+    position: absolute;
+    background:var(--navegacion);
+    inset: 5px;
+    border-radius: 10px;
+}
+
+@keyframes rotate {
+    
+        from
+        {
+            transform: rotate(0deg);
+        }
+        to
+        {
+            transform: rotate(360deg);
+        }
+    
+
+}
+/* @keyframes rotate {
+    100%
+    {
+        filter:hue-rotate(360deg);
+    }
+} */
 .imagenItem1{
-    margin: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
     background-color: cadetblue;
-    width: 250px;
-    height: 200px;
+    width: 150px;
+    height: 100px;
+    z-index: 100;
 }
 .precioItem1{
     background-color: blueviolet;
