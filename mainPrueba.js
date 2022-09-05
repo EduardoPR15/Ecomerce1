@@ -12,8 +12,8 @@ Corazon.classList.toggle("FavoritosShow")
 console.log(btnCart); 
 btnCart.addEventListener("click", function(){
     Carrito.classList.toggle("ShowCart")
-    let html = '<h2>ola q paso :v</h2> '
-    document.querySelector("#fuente").innerHTML = html;
+    let html = ``
+    document.querySelector("fuente").innerHTML = html;
 })
 console.log(dataDB);
 let html = ""
