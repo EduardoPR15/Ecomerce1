@@ -2,7 +2,7 @@ const contenedeor = document.querySelector(".container")
 const masCarrito = document.querySelector(".AgregarCart")
 
 masCarrito.addEventListener(('click'), (e) =>{
-console.log(e);
+console.log(e.target.parentElement.addEventListener);
 
 
 })
