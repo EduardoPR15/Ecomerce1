@@ -4,6 +4,7 @@ const btnheart = document.querySelector(".Corazon")
 const Carrito = document.querySelector(".Carrito")
 const Corazon = document.querySelector(".Favoritos")
 const contenido = document.querySelector(".productos")
+const cartContent = document.querySelector(".fuente")
 let carrito = {}
 btnheart.addEventListener("click", function(){
 Corazon.classList.toggle("FavoritosShow")
@@ -46,7 +47,7 @@ contenido.innerHTML =htmlbody;
 
 
 function printCarrito(){
-    const cartContent = document.querySelector(".fuente")
+
     let htmlCart ="";
     const arrayCart = Object.values(carrito);
 
@@ -64,11 +65,10 @@ arrayCart.forEach(({id, name, stock, precio, cantidad})=> {
             <p>cantidad ${cantidad}</p>
             </div>
         </div>
-            <div class="btnBox">
                     <button class="Sumar"><i class='bx bx-plus'></i></button> 
                     <button class="Restar"><i class='bx bx-minus'></i></button>
                     <button class="Eliminar"><i class='bx bx-trash' ></i></button>
-            </div> 
+            
     </div>`;
 
 })
@@ -100,4 +100,25 @@ if (e.target.classList.contains("btnAgregar")) {
     console.log(Object.values(carrito));
 }
 
+});
+
+
+cartContent.addEventListener("click", (e) => {
+if (e.target.classList.contains("Sumar")) {
+    console.log("suma");
+    const idProducto = +e.target.parentElement.id;
+    carrito[idProducto].cantidad++;
+    
+}
+if (e.target.classList.contains("Restar")) {
+    console.log("Restar");
+    const idProducto = e.target.parentElement.id;
+    carrito[idProducto].cantidad--;
+
+}
+if(e.target.classList.contains("Eliminar" )){
+console.log("eliminar");
+const idProducto = e.target.parentElement.id;
+}
+printCarrito();
 })
