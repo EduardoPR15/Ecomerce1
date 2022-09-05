@@ -105,20 +105,19 @@ if (e.target.classList.contains("btnAgregar")) {
 
 cartContent.addEventListener("click", (e) => {
 if (e.target.classList.contains("Sumar")) {
-    console.log("suma");
     const idProducto = +e.target.parentElement.id;
     carrito[idProducto].cantidad++;
     
 }
 if (e.target.classList.contains("Restar")) {
-    console.log("Restar");
     const idProducto = e.target.parentElement.id;
     carrito[idProducto].cantidad--;
 
 }
-if(e.target.classList.contains("Eliminar" )){
-console.log("eliminar");
-const idProducto = e.target.parentElement.id;
+if(e.target.classList.contains("Eliminar")){
+    const idProducto = e.target.parentElement.id;
+    delete carrito[idProducto];
+    
 }
 printCarrito();
 })
