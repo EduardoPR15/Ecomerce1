@@ -1,4 +1,5 @@
 import {dataDB} from "./data.js"
+let carrito = {}
 const contenido = document.querySelector(".productos")
 function printCatalogo(){
 

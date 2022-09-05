@@ -1,11 +1,12 @@
 import { dataDB } from "./js/data.js"
 import { printCatalogo } from "./js/catalogo.js";
+import { printCarrito, carrito } from "./js/carrito.js";
 import "./js/btn.js";
 const contenido = document.querySelector(".productos")
 const cartContent = document.querySelector(".fuente")
-let carrito = {}
-
+//let carrito = {}
 printCatalogo();
+
 
 
 
@@ -27,7 +28,6 @@ if (e.target.classList.contains("btnAgregar")) {
         carrito[idProducto].stock --;
     }
     printCarrito();
-    console.log(Object.values(carrito));
 }
 
 });

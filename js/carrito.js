@@ -1,7 +1,7 @@
 
+const cartContent = document.querySelector(".fuente")
 
-
-
+let carrito = {}
 
 function printCarrito(){
 
@@ -31,3 +31,4 @@ arrayCart.forEach(({id, name, stock, precio, cantidad})=> {
 })
 cartContent.innerHTML = htmlCart;
 }
+export { printCarrito, carrito}
