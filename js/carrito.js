@@ -22,9 +22,9 @@ arrayCart.forEach(({id, name, stock, precio, cantidad})=> {
             <p>cantidad ${cantidad}</p>
             </div>
         </div>
-                    <button class="Sumar"><i class='bx bx-plus'></i></button> 
-                    <button class="Restar"><i class='bx bx-minus'></i></button>
-                    <button class="Eliminar"><i class='bx bx-trash' ></i></button>
+                    <i class='bx bx-plus'></i>
+                    <i class='bx bx-minus'></i>
+                    <i class='bx bx-trash' ></i>
             
     </div>`;
 

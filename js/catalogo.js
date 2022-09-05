@@ -13,11 +13,11 @@ function printCatalogo(){
                     <div class="imagenItem1"><img src="" alt=""></div>
                     <div class="descripcionBox">
                         <div class="precioItem1" id="${id}">
-                            <p>id ${id}</p>
+                        
                             <p>nombre: ${name}</p>
-                            <p>precio ${precio}</p>
+                            <p>precio: $ ${precio}</p>
                             <p>stock ${stock}</p>
-                            <button class="btnAgregar" ><i class='bx bx-cart-add' id = "agregar"></i></button>
+                            <i class='bx bx-cart-add' id = "agregar"></i>
                         </div>
                     </div>
                 </div>
@@ -28,4 +28,3 @@ function printCatalogo(){
     contenido.innerHTML =htmlbody;
     }
     export {printCatalogo};
-    
