@@ -104,18 +104,27 @@ if (e.target.classList.contains("btnAgregar")) {
 
 
 cartContent.addEventListener("click", (e) => {
-if (e.target.classList.contains("Sumar")) {
     const idProducto = +e.target.parentElement.id;
-    carrito[idProducto].cantidad++;
+if (e.target.classList.contains("Sumar")) {
+    //carrito[idProducto].stock--;
+    if (carrito[idProducto].stock == 0 ) {
+        console.log("ya no hay");
+    }
+    if (carrito[idProducto].stock > 0) {
+        carrito[idProducto].cantidad++;
+        carrito[idProducto].stock--;
+        
+    }
     
 }
 if (e.target.classList.contains("Restar")) {
-    const idProducto = e.target.parentElement.id;
     carrito[idProducto].cantidad--;
+    if (carrito[idProducto].cantidad == 0) {
+        delete carrito[idProducto];
+    }
 
 }
 if(e.target.classList.contains("Eliminar")){
-    const idProducto = e.target.parentElement.id;
     delete carrito[idProducto];
     
 }
