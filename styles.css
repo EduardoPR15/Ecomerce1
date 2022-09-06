@@ -9,10 +9,13 @@
 :root{
     --navegacion:#F07DEA;
     --deg1: rgba(211,112,197,100);
+    --backgroundcolor:#fff0f3;
+    --backcolor1: #f7d6e0;
+    --preciobox: #f2b5d4;
 
 }
 body{
-    background-color: beige;
+    background-color: var(--backgroundcolor)
 }
 .barra{
     position: fixed;
@@ -177,23 +180,25 @@ height: auto;
 }
 .boxItem1{
     margin: auto;
-    background-color: white;
-    width: 350px;
-    height: auto;
+    /* background-color: var(--backcolor1); */
+    width: 300px;
+    height: 400px;
     border-radius: 5px;
 }
 .boxItem1:hover{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    transition: .4s;
+   
 }
 .animationItem1{
+    border-radius: 5px;
     margin: auto;
-    width: 350px;
-    height: 400px;
+    background-color: transparent;
+}
+.animationItem1:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .item1{
     margin: auto;
-    background:var(--navegacion);
+    background-color: var(--backcolor1);
     position: relative;
     display: flex;
     justify-content: center;
@@ -203,14 +208,20 @@ height: auto;
     overflow: hidden;
     flex-wrap: wrap;
     border-radius: 10px;
+    gap: 5px;
+    transition: .5s;
+    
 }
-
+.item1:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: .5s;
+}
 .item1:hover:before{
     content: '';
     position: absolute;
     width: 150px;
     height: 150%;
-    background:linear-gradient(#00CCFF,#D400D4);
+    background:linear-gradient(#2d00f7,#f20089);
     animation: rotate 2s linear infinite;
     
 } 
@@ -218,9 +229,10 @@ height: auto;
 .item1:hover:after{
     content: '';
     position: absolute;
-    background:var(--navegacion);
+    background-color: var(--backcolor1);
     inset: 5px;
     border-radius: 10px;
+    transition: .4s;
 }
 
 @keyframes rotate {
@@ -239,17 +251,19 @@ height: auto;
 .imagenItem1{
     margin-top: 5px;
     width: 96%;
-    height: 200px;
+    height: 250px;
     z-index: 100;
     flex-wrap: wrap;
+    border-radius: 5px 0 0 5px
 }
 .imagenItem1 img{
     width: 100%;
     height: 100%;
+    border-radius: 5px;
 
 }
 .descripcionBox{
-    background-color: red;
+    background-color:var(--preciobox);
     width: 97%;
     height: auto;
     text-align: center;
@@ -257,14 +271,16 @@ height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index: 150;
+    transition: .5s;
+    border-radius: 5px;
 }
 .precioItem1{
     margin: auto;
     background-color: blueviolet;
-    height: auto;
+    height: 90px;
     width: auto;
     z-index: 20;
-    justify-content: space-between;
+    
 }
 
 .bx-cart-add  {
@@ -276,12 +292,20 @@ height: auto;
     font-size: 20px;
 }
 .precioItem1 i {
-    position: absolute;
+    position: relative;
     text-align: right;
     font-size: 80px;
     width: 50%;
-    bottom: 25px;
-    right: 0;
+    bottom: 65px;
+    right: -150px;
+}
+.descripcionBox:hover{
+    position: relative;
+    transform: translateY(-20px);
+    transition: .5s;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+
+    
 }
 
 /* @media (min-width: 500px) {

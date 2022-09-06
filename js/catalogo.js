@@ -8,7 +8,7 @@ function printCatalogo(){
         htmlbody += `
     
         <div class="boxItem1">
-            <div class="animationItem1">
+            
                 <div class="item1">
                     <div class="imagenItem1"><img src="${urlImg}" alt=""></div>
                     <div class="descripcionBox">
@@ -21,7 +21,7 @@ function printCatalogo(){
                         </div>
                     </div>
                 </div>
-            </div>
+            
         </div>`;
     })
     
