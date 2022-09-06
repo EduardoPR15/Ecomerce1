@@ -77,11 +77,3 @@ if(e.target.classList.contains("bx-trash")){
 printCarrito();
 
 })
-
-function total(){
-
-
-
-
-
-}
