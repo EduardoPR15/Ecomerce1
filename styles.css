@@ -404,7 +404,16 @@ footer{
     font-size: 50px;
 }
 .Carrito{
-top: 100px;
+    top: 50px;
+
+    position: fixed;
+    z-index: 900;
+    right: -100%;
+}
+.ShowCart{
+    left: 0;
+    z-index: 200
+
 }
 .Favoritos{
     top: 50px;
@@ -448,11 +457,6 @@ width: 600px;
 .imagenCart{
     width: 200px;
     height: 100%;
-}
-.ShowCart{
-    margin-right: 10px;
-
-
 }
 .swiper{
     top: 150px;
