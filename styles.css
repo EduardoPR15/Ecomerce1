@@ -65,7 +65,7 @@ body{
    display: flex;
 }
 .imagenCart{
-    width: 150px;
+    width: 100px;
     height: 100px;
 }
 .imagenCart img{
@@ -163,7 +163,7 @@ height: auto;
     overflow: hidden;
 }
 .productos{
-    width: auto;
+    width: ;
     height: auto;
     display: grid;
     margin: auto;
@@ -235,12 +235,14 @@ height: auto;
 .imagenItem1 img{
     width: 100%;
     height: 100%;
+
 }
 .descripcionBox{
     background-color: red;
     width: 97%;
     height: auto;
     text-align: center;
+    justify-content: space-between;
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index: 150;
@@ -249,7 +251,7 @@ height: auto;
     margin: auto;
     background-color: blueviolet;
     height: auto;
-    width: 300px;
+    width: auto;
     z-index: 20;
     justify-content: space-between;
 }
@@ -267,5 +269,6 @@ height: auto;
     text-align: right;
     font-size: 80px;
     width: 50%;
-    bottom: 0px;
+    bottom: 25px;
+    right: 0;
 }

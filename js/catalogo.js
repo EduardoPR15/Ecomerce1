@@ -4,13 +4,13 @@ const contenido = document.querySelector(".productos")
 function printCatalogo(){
 
     let htmlbody = ``
-    dataDB.forEach(({id, name, stock, precio,}) => {
+    dataDB.forEach(({id, name, stock, precio, urlImg}) => {
         htmlbody += `
     
         <div class="boxItem1">
             <div class="animationItem1">
                 <div class="item1">
-                    <div class="imagenItem1"><img src="" alt=""></div>
+                    <div class="imagenItem1"><img src="${urlImg}" alt=""></div>
                     <div class="descripcionBox">
                         <div class="precioItem1" id="${id}">
                         
