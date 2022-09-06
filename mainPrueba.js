@@ -62,7 +62,8 @@ if (e.target.classList.contains("bx-plus")) {
 }
 if (e.target.classList.contains("bx-minus")) {
     carrito[idProducto].cantidad--;
-    carrito[idProducto].precioTotal;
+    carrito[idProducto].precioTotal = (precio * cantidad) - precio;
+
     if (carrito[idProducto].cantidad == 0) {
         delete carrito[idProducto];
     }
