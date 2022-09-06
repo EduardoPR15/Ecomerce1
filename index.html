@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaTiendita</title>
+    <link rel ="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -27,37 +28,65 @@
             </div>
             <div class="fuente" id="fuente">
             </div>
-            <div class="totalCart"></div>
+            <div class ="total">
+            </div>
         </div>
     </div>
     <div class="Favoritos">
-            <div class="favoritos1">
-                <div class="favoritos2">
-                    
-                </div>
-            </div>
-    </div>
-    <section class="inicio">
-        <div class="banner">
-            <div class="principalImg"><img src="./Imagenes/img1.jpg" alt="">
+        <ul>
+            <li><a href="#inicio"><p> Inicio</p></a></li>
+            <li><a href="#Acercade"><p>Acerca de</p></a></li>
+            <li><a href="#catalogo"><p>Catalogo</p></a></li>
+            <li><a href="#Productos"><p>Productos</p></a></li>
+        </ul>
 
-            </div>
-            <div class="principalTitulo"><h3>Aqui se vende algo</h3>
+    </div>
+    <section class="inicio" id="inicio">
+        <div class="bannercontainer swiper">
+            <div class="swiper-wrapper">
+                <div class="banner swiper-slide">
+                <div class="principalImg"><img src="./Imagenes/baner1.jpg" alt="">
+                </div>
+                <div class="principalTitulo"><h3>Aqui se vende algo</h3>
+                <article>Aqui dice q cosa es</article>
+                <span>aqui ta el precio</span>
+                </div>
+                </div>
+                <div class="banner swiper-slide">
+                <div class="principalImg"><img src="./Imagenes/baner2.jpg" alt="">
+                </div>
+                <div class="principalTitulo"><h3>Aqui se vende algo</h3>
                 <article>Aqui dice q cosa es</article>
                 <span>aqui ta el precio</span>
 
-            </div>
-            <div class="principalBtn">
-                <button>Ver mas</button> <button>Agregar al carrito</button>
-
+                </div>
+                </div>
+                <div class="banner swiper-slide">
+                    <div class="principalImg"><img src="./Imagenes/baner3.jpg" alt="">
+                    </div>
+                    <div class="principalTitulo"><h3>Aqui se vende algo</h3>
+                    <article>Aqui dice q cosa es</article>
+                    <span>aqui ta el precio</span>
+    
+                    </div>
+                </div>
+                <div class="banner swiper-slide">
+                    <div class="principalImg"><img src="./Imagenes/baner4.jpg" alt="">
+                    </div>
+                    <div class="principalTitulo"><h3>Aqui se vende algo</h3>
+                    <article>Aqui dice q cosa es</article>
+                    <span>aqui ta el precio</span>
+    
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <section class="catalogo">
-        <div class="catalogoFiltro">
-        </div>
-        <div class="productos">
+    <div class="catalogoFiltro" id="Acercade" >
+    </div>
+    <section class="catalogo" id="catalogo">
+       
+        <div class="productos" id="Productos">
         </div>
         <div></div><button></button>
     
@@ -72,9 +101,29 @@
 
 
 
+<footer><div class="redes"><h2>conocenos en nuestras redes sociales</h2> <a href="https://www.facebook.com/profile.php?id=100042208008577" target="_blank"><p>feisbu</p></a>
+    <a href="https://www.instagram.com/theroussecreations/" target="_blank"><p>instagram</p></a>
+
+</div>
 
 
 
+
+</footer>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+    delay: 1000,
+},
+    });
+    </script>
     <script src="./mainPrueba.js" type="module"></script>
 </body>
 </html>

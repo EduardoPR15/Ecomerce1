@@ -13,10 +13,9 @@ function printCatalogo(){
                     <div class="imagenItem1"><img src="${urlImg}" alt=""></div>
                     <div class="descripcionBox">
                         <div class="precioItem1" id="${id}">
-                        
-                            <p>nombre: ${name}</p>
-                            <p>precio: $ ${precio}</p>
-                            <p>stock ${stock}</p>
+                            <p>${name}</p>
+                            <p>Precio: $ ${precio}</p>
+                            <p>En stock: ${stock}</p>
                             <i class='bx bx-cart-add' id = "agregar"></i>
                         </div>
                     </div>

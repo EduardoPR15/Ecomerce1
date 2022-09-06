@@ -1,10 +1,10 @@
 
 const cartContent = document.querySelector(".fuente")
-
+const TotalCart = document.querySelector(".total")
 let carrito = {}
 
 function printCarrito(){
-
+let htmlTotal =""
     let htmlCart ="";
     const arrayCart = Object.values(carrito);
 
@@ -16,8 +16,7 @@ arrayCart.forEach(({id, name, stock, precio, cantidad, urlImg, precioTotal})=> {
         </div>
         <div class="precioBox">
             <div class="precioCart">
-            <p>id ${id}</p>
-            <p>nombre: ${name}</p>
+            <p>${name}</p>
             <p>precio: $ ${precio}</p>
             <p>total : $ ${precioTotal}</p>
             <p>cantidad ${cantidad}</p>
@@ -27,9 +26,13 @@ arrayCart.forEach(({id, name, stock, precio, cantidad, urlImg, precioTotal})=> {
                     <i class='bx bx-minus'></i>
                     <i class='bx bx-trash' ></i>
             
-    </div>`;
+    </div>
+
+    `;
 
 })
 cartContent.innerHTML = htmlCart;
+
 }
+console.log(TotalCart);
 export { printCarrito, carrito}

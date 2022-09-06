@@ -1,5 +1,5 @@
 @import url(//db.onlinewebfonts.com/c/31ed0189fe1ff1e740a652e0f75b77dc?family=Snell+Roundhand);
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 *{
     margin: 0;
@@ -17,7 +17,8 @@
 
 }
 body{
-    background-color: var(--backgroundcolor)
+    background-color: var(--backgroundcolor);
+    font-family: 'Fredoka One', cursive;
 }
 .barra{
     position: fixed;
@@ -63,14 +64,19 @@ body{
 
 }
 .Carrito{
-    margin: auto;
     text-align: center;
     position: fixed;
     width: 100%;
     height: auto;
     z-index: 1000;
     left: 100%;
-    transition: .5s;
+    transition: .8s;
+    border-radius: 10px;
+
+}
+.Favoritos{
+    margin-top: 50px;
+    padding: 20px;
 }
 .dentroDe, .favoritos1{
     display: flex;
@@ -80,6 +86,7 @@ body{
     margin: auto;
     height: auto;
     width: 100%;
+    border-radius: 0 0 10px 10px;
 }
 
 .itemcart1{
@@ -125,6 +132,7 @@ body{
     background-color:var(--backcolor1);
     color:var(--Carrito2);
     text-align: center;
+    border-radius: 10px;
 }
 .fuente, .favoritos2{
     display: flex;
@@ -136,8 +144,7 @@ body{
     background-color:var(--preciobox);
     min-height: 5px;
     width: 100%;
-    max-height: 300px;
-    overflow: scroll;
+   border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
 
@@ -149,7 +156,7 @@ body{
 }
 .ShowCart{
     left: 0;
-    transition: .5s;
+    transition: .8s;
     z-index: 1000;
 }
 .bx-plus,.bx-minus,.bx-trash{
@@ -185,31 +192,55 @@ body{
 width: auto;
 height: auto;
 }
+.bannercontainer{
+    position: relative;
+    top: 100px;
+    width: 350px;
+    height: 500px;
+    margin-bottom: 200px;
+    border-radius: 10px;
+}
 .banner{
-    width: auto;
+    border-radius: 10px;
+    width: 300px;
+    
+}
+.bannercontainer{
+    box-shadow: rgba(75, 0, 65, 0.4) 0px 0px 0px 2px, rgba(156, 3, 131, 0.65) 0px 20px 10px -1px, rgba(255, 0, 140, 0.08) 0px 10px 0px inset;
+}
+.swiper{
+    background-color:var(--preciobox) ;
+    min-width: 350px;
     height: 600px;
     overflow: hidden;
+
 }
 .principalImg{
     background-color: beige;
     margin: auto;
-    width: 300px;
+    width: 100%;
     height: 400px;
     position: relative;
+    border-radius: 10px;
 }
 .principalImg img{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 .principalTitulo{
-    background-color: blue;
-    width: auto;
+    margin: auto;
+    width: 200px;
     height: 100px;
 }
 .principalBtn{
+    margin: auto;
     background-color: blueviolet;
-    width: auto;
+    width: 200px;
     height: 50px;
+}
+.principalBtn button{
+    text-align: center;
 }
 .catalogo{
     width: 100%;
@@ -218,6 +249,10 @@ height: auto;
     overflow: hidden;
 }
 .catalogoFiltro{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 100px;
     background-color: #00CCFF
 }
 .productos{
@@ -230,8 +265,8 @@ height: auto;
 }
 .boxItem1{
     margin: auto;
-    width: 300px;
-    height: 400px;
+    width: auto;
+    height: auto;
     border-radius: 5px;
 }
 .item1{
@@ -257,7 +292,7 @@ height: auto;
 .item1:hover:before{
     content: '';
     position: absolute;
-    width: 150px;
+    width: 40%;
     height: 150%;
     transition: .9s;
     background:linear-gradient(#bc00dd,#f20089);
@@ -347,10 +382,141 @@ height: auto;
 
     
 }
+footer{
+    background-color: #f20089;
+    height: auto;
+}
 
-/* @media (min-width: 500px) {
+ @media (min-width: 500px) {
     body{
-        background-color: blue;
     }
+.navbar{
+    background: linear-gradient(to bottom, var(--deg1), white);
+    height: auto;
+}
+.navbar button{
+    width: 100px;
+}
+.navbar i{
+    font-size: 100px;
+}
+.navbar span{
+    font-size: 50px;
+}
+.Carrito{
+top: 100px;
+}
+.Favoritos{
+    margin-top:90px;
+    padding: 40px;
+}
 
-} */
+}
+.fuente{
+    background-color: var(--backcolor1);
+    width: 600px;
+    height: auto;
+    
+}
+.dentroDe{
+width: 600px;
+}
+.itemcart1{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    background-color: var(--backgroundcolor);
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.imagenCart{
+    width: 200px;
+    height: 100%;
+}
+.ShowCart{
+    margin-right: 10px;
+
+
+}
+.swiper{
+    top: 150px;
+    height: 700px;
+    width: 600px;
+    margin-bottom: 200px;
+}
+.banner{
+width: 100%;
+height: 100%;
+align-items: center;
+}
+.principalTitulo{
+    height: auto;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+}
+.productos{
+    margin-left: 15%;
+    margin-right: 15%;
+    grid-column-gap: 250px;
+    grid-row-gap: 100px;
+}
+.boxitem1{
+   width: auto;
+   height: auto;
+
+}
+.item1{
+    width: 500px;
+    height: 700px;
+}
+.imagenItem1{
+    margin-top: -35px;
+    width: 96%;
+    height: 400px;
+    z-index: 100;
+    flex-wrap: wrap;
+    border-radius: 10px 0 0 10px
+}
+.descripcionBox{
+    width: 96%;
+    height: 150px;
+}
+.precioItem1 p {
+    align-items: center;
+    text-align: left;
+    font-size: 35px;
+    margin-top: -10px;
+}
+.precioItem1 i {
+    position: relative;
+    text-align: right;
+    font-size: 120px;
+    width: 50%;
+    bottom: 120px;
+    left: 250px;
+}
+.item1:hover:after{
+    content: '';
+    position: absolute;
+    background-color: var(--backcolor1);
+    inset: 10px;
+    border-radius: 10px;
+    transition: .9s;
+}
+.descripcionBox:hover{
+    transform: translateY(-50px);
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 12px, rgba(240, 46, 170, 0.3) 0px 24px, rgba(240, 46, 170, 0.2) 0px 36px, rgba(240, 46, 170, 0.1) 0px 48px, rgba(240, 46, 170, 0.05) 0px 60px;
+
+    
+}
+ }
+ @media(max-width: 499px) {
+    body{
+        
+    }
+    .fuente{
+        overflow: scroll; 
+    }
+ }

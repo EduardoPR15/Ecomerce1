@@ -70,6 +70,8 @@ if (e.target.classList.contains("bx-minus")) {
 
 }
 if(e.target.classList.contains("bx-trash")){
+    carrito[idProducto].cantidad = 0;
+    
     delete carrito[idProducto];
     
 }
