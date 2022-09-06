@@ -162,12 +162,16 @@ height: auto;
     height: auto;
     overflow: hidden;
 }
+.catalogoFiltro{
+    background-color: #00CCFF
+}
 .productos{
-    width: ;
-    height: auto;
     display: grid;
-    margin: auto;
-    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr) );
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
 }
 .boxItem1{
     margin: auto;
@@ -277,3 +281,10 @@ height: auto;
     bottom: 25px;
     right: 0;
 }
+
+/* @media (min-width: 500px) {
+    body{
+        background-color: blue;
+    }
+
+} */
