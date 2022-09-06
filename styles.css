@@ -64,6 +64,8 @@ body{
 
 }
 .Carrito{
+    background-color: var(--backcolor1);
+    top: 50px;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -101,7 +103,7 @@ body{
 .imagenCart{
     border-radius: 10px;
     width: 100px;
-    height: 100px;
+    height: auto;
 }
 .imagenCart img{
     width: 100%;
@@ -109,11 +111,14 @@ body{
     border-radius: 10px 0 0 10px;
 }
 .precioBox{
-    margin: auto;
-    /* text-align: center; */
+    margin-top: 15px;
+    text-align: center;
     width: 100px;
     height: 100px;
+    color: var(--Carrito2);
     
+}
+.precioBox p{
 }
 .bx-plus, .bx-minus, .bx-trash{
     font-size: 50px;
@@ -126,7 +131,7 @@ body{
 
 }
 .miCarrito{
-    margin-top: 50px;
+    margin-top: 5px;
     width: auto;
     height: 50px;
     background-color:var(--backcolor1);
@@ -144,7 +149,7 @@ body{
     background-color:var(--preciobox);
     min-height: 5px;
     width: 100%;
-   border-radius: 10px;
+    border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
 
@@ -387,7 +392,7 @@ footer{
     height: a;
 }
 
- @media (min-width: 500px) {
+ @media (min-width: 700px) {
     body{
     }
 .navbar{
@@ -404,15 +409,14 @@ footer{
     font-size: 50px;
 }
 .Carrito{
-    top: 50px;
-
-    position: fixed;
-    z-index: 900;
-    right: -100%;
+    width: 30%;
+    padding: 10px;
 }
 .ShowCart{
-    left: 0;
-    z-index: 200
+    top: 100px;
+    left: 70%;
+    z-index: 2300;
+
 
 }
 .Favoritos{
@@ -438,7 +442,7 @@ footer{
 
 .fuente{
     background-color: var(--backcolor1);
-    width: 600px;
+    width: auto;
     height: auto;
     
 }
@@ -453,6 +457,32 @@ width: 600px;
     background-color: var(--backgroundcolor);
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    color: var(--Carrito2);
+}
+.imagenCart{
+    max-width:200px ;
+    min-width: 50px;
+    max-height: auto ;
+    min-height: 50px;
+}
+.precioBox{
+    width: 100px;
+}
+.itemcart1 p{
+    margin-top: 15px;
+    font-size: 100%;
+    
+}
+.bx-minus {
+    position: relative;
+    top: 100px;
+    right: 50px;
+}
+.bx-plus{
+    top: 40px;
+}
+.bx-trash{
+    top: 60px;
 }
 .imagenCart{
     width: 200px;
@@ -465,9 +495,9 @@ width: 600px;
     margin-bottom: 200px;
 }
 .banner{
-width: 100%;
-height: 100%;
-align-items: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
 }
 .principalTitulo{
     height: auto;
@@ -482,8 +512,8 @@ align-items: center;
     grid-row-gap: 100px;
 }
 .boxitem1{
-   width: auto;
-   height: auto;
+    width: auto;
+    height: auto;
 
 }
 .item1{
