@@ -1,5 +1,6 @@
-@import url('https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css');
 @import url(//db.onlinewebfonts.com/c/31ed0189fe1ff1e740a652e0f75b77dc?family=Snell+Roundhand);
+@import url('https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css');
+
 
 *{
     margin: 0;
@@ -83,6 +84,7 @@ body{
 }
 .precioCart{
     background-color: #D400D4;
+    height: 100%;
 
 }
 .fuente, .favoritos2{
