@@ -8,11 +8,11 @@ function printCarrito(){
     let htmlCart ="";
     const arrayCart = Object.values(carrito);
 
-arrayCart.forEach(({id, name, stock, precio, cantidad})=> {
+arrayCart.forEach(({id, name, stock, precio, cantidad, urlImg})=> {
     htmlCart += `
     <div class="itemcart1" id="${id}">
         <div class="imagenCart">
-                    <img src="./Imagenes/280252846_554723679341548_6935970933134506652_n.jpg" alt="">
+                    <img src="${urlImg}" alt="">
         </div>
         <div class="precioBox">
             <div class="precioCart">
