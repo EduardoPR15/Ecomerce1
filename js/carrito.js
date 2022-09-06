@@ -18,8 +18,8 @@ arrayCart.forEach(({id, name, stock, precio, cantidad, urlImg, precioTotal})=> {
             <div class="precioCart">
             <p>id ${id}</p>
             <p>nombre: ${name}</p>
-            <p>precio ${precio}</p>
-            <p>precio total : $ ${precioTotal}</p>
+            <p>precio: $ ${precio}</p>
+            <p>total : $ ${precioTotal}</p>
             <p>cantidad ${cantidad}</p>
             </div>
         </div>
