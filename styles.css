@@ -188,6 +188,18 @@ body{
     top: 20px;
     right: 25px;
 }
+.reset{
+    border-radius: 5px;
+    border-color:var(--carrito1);
+    background-color: transparent;
+    position: relative;
+    left: 50px;
+    bottom: 35px;
+}
+.TotalCart h2{
+    position: relative;
+    left: -40px;
+}
 .Favoritos{
     background-color:pink;
     position: fixed;
@@ -508,6 +520,29 @@ width: 150px;
 .imagenCart{
     width: 150px;
     height: 100%;
+}
+.reset{
+    position: relative;
+    left: 80px;
+    bottom: 45px;
+    font-size: 25px;
+    color: var(--carrito1);
+    font-family: cursive;
+}
+.TotalCart{
+    padding-right: 100px;
+    width: 100%;
+    height: 50px;
+    margin-right: 500px;
+    
+}
+.TotalCart h2{
+    font-size: 30px;
+    position: relative;
+    left: -80px;
+}
+.TotalCart p{
+    font-size: 30px;
 }
 .swiper{
     top: 150px;

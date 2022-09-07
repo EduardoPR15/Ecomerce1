@@ -131,7 +131,7 @@ TotalCart.addEventListener(("click"), (e) =>  {
     if (e.target.classList.contains("reset")) {
         console.log("reset");
         cartContent.innerHTML = "<h2>Gracias por su compra</h2>";
-        TotalCart.innerHTML = ` <p>has pagado: $ ${suma1}</h2>`
+        TotalCart.innerHTML = ` <p>has pagado:$ ${suma1}</p>`
         setTimeout("location.reload(true);",5000)
     }
 })
