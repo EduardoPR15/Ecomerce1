@@ -157,15 +157,16 @@ body{
 
 }
 .TotalCart{
-    /* flex-direction: column; */
+    flex-direction: row; 
     position: relative;
     color: var(--carrito1);
     width: 150px;
     height: 50px;
     right: -200px;
     font-family: 'Pacifico', cursive;
-    font-size: 30px;
-
+}
+.TotalCart h2 {
+    font-size: 20px;
 }
 .ShowCart{
     left: 0;

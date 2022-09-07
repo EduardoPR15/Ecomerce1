@@ -18,7 +18,7 @@ arrayCart.forEach(({id, name, stock, precio, cantidad, urlImg, precioTotal})=> {
             <div class="precioCart">
             <p>${name}</p>
             <p>precio: $ ${precio}</p>
-            <p>total : $ ${precioTotal}</p>
+            <p>subtotal : $ ${precioTotal}</p>
             <p>cantidad ${cantidad}</p>
             </div>
         </div>
@@ -31,6 +31,10 @@ arrayCart.forEach(({id, name, stock, precio, cantidad, urlImg, precioTotal})=> {
     `;
 
 })
+if (cartContent.innerHTML = "") {
+    console.log("vacio");
+    TotalCart.innerHTML = `0`
+}
 cartContent.innerHTML = htmlCart;
 
 }

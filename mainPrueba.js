@@ -6,6 +6,7 @@ const contenido = document.querySelector(".productos")
 const cartContent = document.querySelector(".fuente")
 const TotalCart = document.querySelector(".TotalCart")
 let suma1 = 0;
+let suma2 = 0;
 //let carrito = {}
 printCatalogo();
 const catalogo = document.querySelector(".item1")
@@ -15,23 +16,33 @@ contenido.addEventListener(("click"), (e) =>  {
     };
 })
 
-
-
-
-
-
 contenido.addEventListener(('click'), (e) => {
+
 
 if (e.target.classList.contains("bx-cart-add") )  {
     const idProducto = +e.target.parentElement.id;
     const findProducto = dataDB.find((item) => item.id == idProducto);
+ 
     
-    if (carrito[idProducto] && carrito[idProducto].stock >= 1){
-        carrito[idProducto].cantidad++;
-        carrito[idProducto].stock--;
-        suma1 += (carrito[idProducto].precio)
+    
+    if (carrito[idProducto] && carrito[idProducto].stock >= 1 ){
+        let precio = carrito[idProducto].precio;
+        let cantidad = carrito[idProducto].cantidad;
+        if (carrito[idProducto].stock == 0) {
+            carrito[idProducto].cantidad++;
+            carrito[idProducto].stock--;
+            carrito[idProducto].precioTotal = precio + (precio * cantidad) ;
+            array1.push(carrito[idProducto].precio);
+            suma1 += (carrito[idProducto].precio)
+            console.log(array1);
+            console.log(TotalCart);
+            
+        }
+        
         
     }
+
+    
     else{
         carrito[idProducto] = findProducto ;
         carrito[idProducto].cantidad = 1;
@@ -39,11 +50,16 @@ if (e.target.classList.contains("bx-cart-add") )  {
         carrito[idProducto].precioTotal = carrito[idProducto].precio;
         suma1 += (carrito[idProducto].precio)
         console.log("primera suma");
+        
     }
-    console.log(carrito);
+ 
+
+    console.log("lkimte1");
     printCarrito();
+    
 }
-TotalCart.innerHTML = ` Total ${suma1}` 
+
+TotalCart.innerHTML = `<h2>Total ${suma1}</h2> <button class= "reset" id="reset"> Comprar</button>`  
 
 });
 let array1 = []
@@ -62,15 +78,15 @@ if (e.target.classList.contains("bx-plus")) {
         carrito[idProducto].cantidad++;
         carrito[idProducto].stock--;
         carrito[idProducto].precioTotal = precio + (precio * cantidad) ;
-       array1.push(carrito[idProducto].precio);
-       suma1 += (carrito[idProducto].precio)
-       console.log(array1);
-       console.log(TotalCart);
+        array1.push(carrito[idProducto].precio);
+        suma1 += (carrito[idProducto].precio)
+        console.log(array1);
+        console.log(TotalCart);
         
     }
     
 }
-TotalCart.innerHTML = `${suma1}` 
+//TotalCart.innerHTML = `${suma1}` 
 if (e.target.classList.contains("bx-minus")) {
     carrito[idProducto].cantidad--;
     carrito[idProducto].precioTotal = (precio * cantidad) - precio;
@@ -88,16 +104,34 @@ if(e.target.classList.contains("bx-trash")){
     suma1 -= (carrito[idProducto].precioTotal)
     
     delete carrito[idProducto];
-    
+    if (cartContent.innerHTML = "");
+    {
+        TotalCart.innerHTML = ` Total ${suma2}`
+        array1 = 0
+    }
 }
-// for (let i = 0; i < array1.length; i++) {
-//     suma1 += array1[i];
-//     console.log(suma1);
-//  }
- 
+
+
+if (cartContent.innerHTML = "");
+    {
+        TotalCart.innerHTML = ` Total ${suma2} `
+        console.log("vacio");
+    }
 printCarrito();
-TotalCart.innerHTML = ` Total ${suma1}` 
+
+TotalCart.innerHTML = ` <h2>Total: $ ${suma1}</h2> <button class= "reset" id="reset"> Comprar</button>` 
 
 
 
+})
+
+TotalCart.addEventListener(("click"), (e) =>  {
+    console.log(e.target);
+    const refreshRate =500;
+    if (e.target.classList.contains("reset")) {
+        console.log("reset");
+        cartContent.innerHTML = "<h2>Gracias por su compra</h2>";
+        TotalCart.innerHTML = ` <p>has pagado: $ ${suma1}</h2>`
+        setTimeout("location.reload(true);",5000)
+    }
 })
