@@ -119,6 +119,7 @@ body{
     
 }
 .precioBox p{
+    font-size: 13px;
 }
 .bx-plus, .bx-minus, .bx-trash{
     font-size: 50px;
@@ -155,10 +156,12 @@ body{
 
 }
 .TotalCart{
-    flex-direction: column;
-    background-color: white;
+    /* flex-direction: column; */
+    position: relative;
+    color: var(--carrito1);
     width: 100px;
     height: 50px;
+    right: -200px;
 
 }
 .ShowCart{
@@ -371,7 +374,7 @@ height: auto;
 .precioItem1 p {
     align-items: center;
     text-align: left;
-    font-size: 20px;
+    font-size: 16px;
 }
 .precioItem1 i {
     position: relative;
@@ -471,7 +474,7 @@ width: 150px;
 .precioBox{
     width: 100px;
 }
-.itemcart1 p{
+.precioCart p{
     margin-top: 10px;
     font-size: 100%;
     
