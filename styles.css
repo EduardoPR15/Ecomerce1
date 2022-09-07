@@ -1,4 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/31ed0189fe1ff1e740a652e0f75b77dc?family=Snell+Roundhand);
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 *{
@@ -18,7 +18,7 @@
 }
 body{
     background-color: var(--backgroundcolor);
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Pacifico', cursive;
 }
 .barra{
     position: fixed;
