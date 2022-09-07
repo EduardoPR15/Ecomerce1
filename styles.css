@@ -397,9 +397,16 @@ height: auto;
 }
 footer{
     background-color: #f20089;
-    height: a;
+    color: var(--backcolor1);
+    font-size: 13px;
+    text-align: center;
 }
-
+footer i{
+    padding-left: 30px;
+    padding-right: 30px;
+    color: var(--backcolor1);
+    font-size: 50px;
+}
  @media (min-width: 700px) {
     body{
     }
@@ -584,5 +591,17 @@ width: 150px;
     .fuente{
         max-height: 400px;
         overflow: scroll; 
+    }
+    footer{
+        background-color: #f20089;
+        color: var(--backcolor1);
+        font-size: 13px;
+        text-align: center;
+    }
+    footer i{
+        padding-left: 30px;
+        padding-right: 30px;
+        color: var(--backcolor1);
+        font-size: 30px;
     }
 }
